@@ -10,7 +10,7 @@ services:
     environment:
       - UDEV=1
     ports:
-      - "8000:8000" # Map 8000 to 8000 of our docker image
+      - "3000:3000" # Map 8000 to 8000 of our docker image
     privileged: true
     volumes:
       - ./ejercicios:/ejercicios # Map ./app directory en docker app folder
@@ -18,7 +18,7 @@ services:
       - SYS_ADMIN
     devices:
       - '/dev:/dev'
-    command: >
-      sh -c "node ejercicio2.js"
+    command: sh -c "cd ./utn-ecommerce && DEBUG=utn-ecommerce:* npm start"
+     # sh -c "DEBUG=utn-ecommerce:* npm start"
 
 

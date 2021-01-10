@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "utn-ecommerce": "file:utn-ecommerce"
+  }
+}
