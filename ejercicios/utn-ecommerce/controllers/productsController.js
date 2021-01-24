@@ -10,4 +10,23 @@ module.exports = {
     let products = eg_products
     res.status(200).json(products)
   }
+
+  getById: async function(req, res, next){
+    let product =
+  }
 }
+
+
+// router.get('/:id([0-9]+)', function(req,res,next){
+//   console.log(req.query.name);
+//   console.log(req.params.id);
+//   res.render('catalogo', {title: 'Products'})
+// })
+//
+// router.get('/', function(req,res){
+//   console.log('home');
+// })
+//
+// router.get('/destacados', function(req,res){
+//   console.log('destacados');
+// })
