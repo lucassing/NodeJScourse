@@ -1,12 +1,20 @@
 version: "3"
 
 services:
+  mongo:
+    restart: always
+    container_name: mongo_cont
+    image: mongo
+    ports:
+      - "27017:27017"
 
   ejercicios:
-    restart: always
+    restart: "no"
     build: .
     container_name: node_js_course
     image: node_js:course
+    depends_on:
+      - mongo
     environment:
       - UDEV=1
     ports:
